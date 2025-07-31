@@ -8,15 +8,21 @@ class Cookie extends Model
 {
     protected $fillable = [
         'message',
-        'timestamp',
         'creator',
     ];
 
-    /**
-     * Get the user who created the cookie.
-     */
     public function user()
     {
         return $this->belongsTo(User::class, 'creator');
+    }
+
+    public function hasCreator(): bool
+    {
+        return !is_null($this->creator);
+    }
+
+    public function getCreatorNameAttribute(): string
+    {
+        return $this->user ? $this->user->name : 'Anonymous';
     }
 }
