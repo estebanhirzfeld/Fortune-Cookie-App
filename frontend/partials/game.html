@@ -1,0 +1,9 @@
+<div>
+    <h2>Tu Frase de la Fortuna</h2>
+    <div class="fortune-box">
+        <p class="fortune-text" ng-if="fortune.message">{{ fortune.message }}</p>
+        <p ng-if="!fortune.message && !error">Cargando tu destino...</p>
+        <p class="error" ng-if="error">{{ error }}</p>
+    </div>
+    <button ng-click="getFortune()">Recibir otra frase</button>
+</div>

@@ -1,0 +1,45 @@
+<div>
+    <h2>Panel de Administración de Frases</h2>
+
+    <!-- Formulario para agregar nuevas frases -->
+    <form ng-submit="addCookie()">
+        <h3>Agregar Nueva Frase</h3>
+        <input type="text" ng-model="newCookie.message" placeholder="Escribe una nueva frase sabia..." required>
+        <br><br>
+        <button type="submit">Agregar Frase</button>
+    </form>
+    
+    <!-- Mensaje de error (para frases duplicadas, etc.) -->
+    <div class="error" ng-if="errorMessage">
+        <strong>Error:</strong> {{ errorMessage }}
+    </div>
+
+    <hr>
+
+    <!-- Tabla con todas las frases -->
+    <h3>Frases Existentes</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Frase</th>
+                <th>Creada en</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Repetimos una fila por cada 'cookie' en nuestro array -->
+            <tr ng-repeat="cookie in cookies">
+                <td>{{ cookie.id }}</td>
+                <td>{{ cookie.message }}</td>
+                <!-- Usamos un filtro de Angular para formatear la fecha -->
+                <td>{{ cookie.created_at | date:'dd/MM/yyyy HH:mm' }}</td>
+                <td>
+                    <!-- El botón de eliminar llama a la función con el objeto 'cookie' completo -->
+                    <button class="delete" ng-click="deleteCookie(cookie)">Eliminar</button>
+                    <button class="edit" ng-click="editCookie(cookie)">Editar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

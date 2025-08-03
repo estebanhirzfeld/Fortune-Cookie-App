@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="fortuneCookieApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Galleta de la Fortuna</title>
+    <!-- AngularJS Core -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <!-- AngularJS Router -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+    
+    <!-- Nuestra aplicación -->
+    <script src="app.js"></script>
+
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        nav a { text-decoration: none; color: #007bff; margin-right: 15px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        h1, h2 { color: #333; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        button.delete { background-color: #dc3545; }
+        button.delete:hover { background-color: #c82333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f8f9fa; }
+        input[type="text"] { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .fortune-box { border: 2px dashed #ccc; padding: 20px; text-align: center; margin: 20px 0; }
+        .fortune-text { font-size: 1.5em; font-style: italic; color: #555; }
+        .error { color: red; background-color: #fdd; border: 1px solid red; padding: 10px; margin-bottom: 15px; border-radius: 4px; }
+        .text-center { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="text-center">Fortune Cookie App 🥠</h1>
+            <nav>
+                <a href="#!/">Juego</a>
+                <a href="#!/dashboard">Administración</a>
+            </nav>
+        </header>
+
+        <main>
+            <div ng-view></div>
+        </main>
+    </div>
+
+</body>
+</html>
