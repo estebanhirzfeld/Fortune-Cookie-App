@@ -102,9 +102,11 @@ angular.module('fortuneCookieApp', ['ngRoute'])
         // Función para editar una frase
         $scope.editCookie = function(cookie) {
             const newMessage = prompt('Ingrese la nueva frase:', cookie.message);
-            if (newMessage !== null) {
-                cookie.message = newMessage;
+            if (newMessage == null) {
+                return;
             }
+            
+            cookie.message = newMessage;
             $http.put(API_URL + '/cookies/' + cookie.id, { message: newMessage })
                 .then(function() {
                     // Actualiza la frase en el array local
