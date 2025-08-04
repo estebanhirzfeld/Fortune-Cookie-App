@@ -26,7 +26,7 @@ Antes de comenzar, asegúrate de tener instalado:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/estebanhirzfeld/Fortune-Cookie-App.git)
+git clone https://github.com/estebanhirzfeld/Fortune-Cookie-App.git
 cd fortune-cookie-app
 ```
 
