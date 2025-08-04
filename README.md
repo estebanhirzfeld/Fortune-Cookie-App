@@ -1,5 +1,7 @@
 # Fortune Cookie App 🥠
 
+![Fortune Cookie App Banner](fortune-cookie-app-banner.png)
+
 Una aplicación web que simula galletas de la fortuna, mostrando frases inspiradoras y motivacionales de forma aleatoria.
 
 ## 🛠️ Tecnologías Utilizadas
@@ -70,6 +72,8 @@ El frontend estará disponible en: `http://localhost:5500`
 - **Interfaz Intuitiva**: Diseño simple y atractivo que simula abrir una galleta de la fortuna
 
 ### 🔧 Panel de Administración
+
+![Fortune Cookie App Admin Dashboard](fortune-cookie-app-admin.png)
 
 Funcionalidades administrativas para gestionar el contenido:
 
